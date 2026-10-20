@@ -22,6 +22,7 @@ import { LearningModel } from "back-end/src/models/LearningModel";
 import { HoldoutModel } from "back-end/src/models/HoldoutModel";
 import { AutoRunModel } from "back-end/src/models/AutoRunModel";
 import { PopulationModel } from "back-end/src/models/PopulationModel";
+import { ApiKeyModel } from "back-end/src/models/ApiKeyModel";
 import { ModelClass } from "back-end/src/services/context";
 import { getBuild } from "back-end/src/util/build";
 import { ApiRequestLocals } from "back-end/types/api";
@@ -78,7 +79,6 @@ import { rampSchedulesRoutes } from "./ramp-schedules/ramp-schedules.router";
 import { reportRoutes } from "./reports/reports.router";
 import { namespacesRoutes } from "./namespaces/namespaces.router";
 import { rolesRoutes } from "./roles/roles.router";
-import { apiKeysRoutes } from "./api-keys/api-keys.router";
 import { getOpenApiRoutesForApiConfig } from "./apiModelHandlers";
 
 const API_MODELS: ModelClass[] = [
@@ -99,6 +99,7 @@ const API_MODELS: ModelClass[] = [
   HoldoutModel,
   AutoRunModel,
   PopulationModel,
+  ApiKeyModel,
 ];
 
 const router = Router();
@@ -238,7 +239,6 @@ export const allRoutes = [
   ...reportRoutes,
   ...namespacesRoutes,
   ...rolesRoutes,
-  ...apiKeysRoutes,
   ...openaiRoutes,
   ...visualEditorAiRoutes,
 ];

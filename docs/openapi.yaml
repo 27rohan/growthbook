@@ -36611,7 +36611,7 @@ paths:
             curl -X PUT 'https://api.growthbook.io/api/v1/settings' \
               -H 'Authorization: Bearer YOUR_API_KEY' \
               -H 'Content-Type: application/json' \
-              -d '{"statsEngine":"frequentist","pValueThreshold":0.05,"requireProjectForFeatures":true,"preferredEnvironment":null}'
+              -d '{"statsEngine":"frequentist","pValueThreshold":0.05,"experimentMinLengthDays":7,"preferredEnvironment":null}'
   /v1/settings/approvals:
     put:
       operationId: putApprovalSettings
